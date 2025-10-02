@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav-one">
+            <h2>LOGO</h2>
+            <ul class="menu-principal">
+                <li>Mujer</li>
+                <li>Hombre</li>
+                <li>Niños</li>
+                <li>Hogar</li>
+            </ul>
+        </div>
+        <div class="nav-two">
+            <ul>
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li><i class="fa-solid fa-user"></i></li>
+                <li class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="quantity"></span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-heart"></i>
+                </li>
+                <li><i id="hamburguesa" class="fa-solid fa-bars"></i></li>
+
+
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="one" aria-label="Galería de fotografías">
+            <div class="grid-layout">
+
+                <!-- Foto principal -->
+                <figure class="main overlay">
+                    <img src="1.avif" alt="Foto principal">
+                </figure>
+
+                <!-- Miniaturas -->
+                <figure class="thumb overlay">
+                    <img src="2.avif" alt="Miniatura 1">
+                </figure>
+
+                <figure class="thumb overlay">
+                    <img src="3.avif" alt="Miniatura 2">
+                </figure>
+
+                <figure class="thumb overlay">
+                    <img src="4.avif" alt="Miniatura 3">
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+
+        <section class="two">
+
+            <section class="section-one">
+                <h3>Body con ribete de encaje</h3>
+                <i id="favorite" class="fa-regular fa-heart"></i>
+            </section>
+
+            <span class="mensaje">*Este articulo ha sido añadido a Favoritos*</span>
+            <section class="section-two">
+                <p>15,99$</p>
+            </section>
+            <section class="section-three">
+                <p>COLOR: </p>
+                <div class="colores">
+                    <img src="/marron.avif" alt="body-negro">
+                    <img src="/negro.avif" alt="body-marron">
+                    <img src="/rosa.avif" alt="body-rosa">
+
+                </div>
+            </section>
+            <p>SELECCIONAR TALLA</p>
+            <section class="section-four">
+                <div class="talla">xxs</div>
+                <div class="talla">xs</div>
+                <div class="talla">s</div>
+                <div class="talla">m</div>
+                <div class="talla">l</div>
+                <div class="talla">xl</div>
+            </section>
+            <section class="section-five">
+                <button class="guia-tallas">guia de tallas</button>
+            </section>
+            <button id="addCart">añadir</button>
+
+            <section class="section-six">
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false" aria-controls="ans-1">
+                        <span>Descripción y entallado</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div id="ans-1" class="accordion-panel">
+                        <p>
+                            Nueva Colección Body sin mangas en punto elástico. Modelo con escote de pico profundo y
+                            elegante detalle
+                            de encaje delante.<br>
+                            Frunces en los laterales para crear un efecto drapeado y botones de presión ocultos en la
+                            entrepierna.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false" aria-controls="ans-2">
+                        <span>materiales</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div id="ans-2" class="accordion-panel">
+                        <p>
+                            <strong>Composición</strong><br>
+                            Forro: Poliéster 90%, Elastano 10%<br>
+                            Tela exterior: Poliamida 97%, Elastano 3%<br>
+                            Material:<br>
+                            Punto
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false" aria-controls="ans-3">
+                        <span>guía de cuidados</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div id="ans-3" class="accordion-panel">
+                        <p>
+                            <strong>Instrucciones de cuidado</strong><br>
+                            Se puede limpiar en seco.<br>
+                            Planchar a temperatura baja.<br>
+                            En caso necesario, usar solo lejía sin cloro.<br>
+                            Secar colgado.<br>
+                            Lavar con prendas de color parecido.<br>
+                            Lavado a máquina a 30°,<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false" aria-controls="ans-4">
+                        <span>entrega y pago</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div id="ans-4" class="accordion-panel">
+                        <p>
+                            Entrega estándar gratuita para Miembros H&M y Miembros H&M Plus en pedidos superiores a
+                            30€.<br>
+
+                            Ofrecemos entrega a domicilio, Click & Collect en tiendas H&M seleccionadas y punto de
+                            recogida o locker, para códigos
+                            postales dentro de la Península o Baleares. <br>No realizamos entregas a Canarias, Ceuta,
+                            Melilla, Andorra o Gibraltar.<br>
+                            Aceptamos pagos con tarjeta MasterCard, Visa o American Express. También puedes seleccionar
+                            el pago en 3 plazos sin
+                            intereses a través de Klarna, vía Paypal o con una tarjeta regalo de H&M.<br> Encuentra más
+                            información en las páginas de
+                            Atención al Cliente. <br>Para artículos de otras marcas, es posible que se apliquen gastos
+                            de
+                            envío.<br> Los gastos de envío de
+                            cada paquete se mostrarán al finalizar la compra.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+
+    </main>
+</body>
+
+</html>

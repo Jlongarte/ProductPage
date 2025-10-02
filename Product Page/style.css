@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Questrial&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-one {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+
+.nav-two {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+ul {
+  display: flex;
+  gap: 15px;
+}
+
+li {
+  list-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+#hamburguesa {
+  display: none;
+}
+
+/* ----------- MAIN LAYOUT ----------- */
+main {
+  display: flex;
+  padding: 20px 0;
+  gap: 5rem;
+  width: 100%;
+}
+
+.one {
+  width: 50%;
+}
+
+/* ----------- GALERÍA ----------- */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.main {
+  grid-column: 1 / -1;
+  overflow: hidden;
+}
+
+.thumb {
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.main img {
+  object-fit: contain;
+}
+
+.thumb img {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.grid-layout img {
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*SECCION DOS*/
+
+.two {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.section-one {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+#favorite {
+  cursor: pointer;
+}
+
+.mensaje {
+  display: none;
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: green;
+}
+.colores {
+  display: flex;
+  padding: 15px 0;
+}
+
+.colores img {
+  width: 20%;
+  height: auto;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.colores img.selected {
+  border: 1px solid black;
+}
+.section-four {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+
+.talla {
+  padding: 20px 30px;
+  border: 1px solid lightgray;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.talla.selected {
+  border: 1px solid black;
+}
+.section-five {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end !important;
+  margin: 20px;
+}
+
+#favorites-two {
+  display: none;
+}
+.guia-tallas {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#addCart {
+  width: 90%;
+  padding: 20px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+#quantity {
+  display: none;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+}
+.accordion-btn {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion-btn i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn[aria-expanded="true"] i {
+  transform: rotate(45deg); /* + → x */
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.accordion-panel p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.accordion-panel.open {
+  max-height: 1000px;
+}
+
+span {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Estilos para móviles 
+ */
+@media (max-width: 767px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .one {
+    width: 90%;
+  }
+
+  .two {
+    width: 90%;
+    padding: 0px;
+  }
+
+  .menu-principal {
+    display: none;
+  }
+
+  #hamburguesa {
+    display: block;
+    cursor: pointer;
+  }
+}
